@@ -1,0 +1,39 @@
+.add-btn {
+  outline: none;
+  border: 2px solid $dark;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: $dark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  transition: .3s;
+
+  &:hover {
+    background-color: $white;
+
+    &::before,
+    &::after {
+      background-color: $dark;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 5px;
+    background-color: $white;
+    border-radius: 5px;
+    transition: .3s;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}
