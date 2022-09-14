@@ -26,3 +26,50 @@ ul {
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.form-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: .5s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.default-btn {
+  text-align: center;
+  font-size: 14px;
+  width: 130px;
+  height: 40px;
+  border-radius: 8px;
+  border: 2px solid $dark;
+  color: $dark;
+  background-color: $white;
+  transition: .3s;
+
+  &:hover {
+    color: $white;
+    background-color: $dark;
+  }
+
+  &._fill {
+    color: $white;
+    background-color: $dark;
+
+    &:hover {
+      color: $dark;
+      background-color: $white;
+    }
+  }
+}
