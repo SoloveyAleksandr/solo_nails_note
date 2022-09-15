@@ -35,21 +35,31 @@ export const useFirebase = () => {
     }
   };
 
-  const updateDay = async (dayID, timeID, fillName, value) => {
+  const addTime = async (id, time) => {
     try {
-      await updateDoc(doc(dayRef, dayID), {
-        [`timeList.${timeID}.${fillName}`]: value,
-      })
+      await updateDoc(doc(dayRef, id), {
+        ['timeList.' + [time.id]]: time,
+      });
     } catch (e) {
       console.log(e);
     }
-  }
+  };
+
+  const editTime = async (id, time) => {
+    try {
+      await updateDoc(doc(dayRef, id), {
+        ['timeList.' + [time.id]]: time,
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   return {
     getAllDates,
     addNewDay,
     removeDay,
-    updateDoc,
-    updateDay,
+    addTime,
+    editTime,
   };
 };
