@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Webpack</title>
 </head>
+
 <body>
-  
+
+  <!-- spiner -->
+  <div class="loader active">
+    <div class="loader__spiner"></div>
+  </div>
+
+  <button class="add-btn">
+  </button>
+
+  <section class="days">
+    <div class="container">
+      <ul class="days-list">
+      </ul>
+    </div>
+  </section>
+
+  <section class="form-wrapper date-form-wrapper">
+    <form id="date-form" class="date-form__form">
+      <input required type="date" name="date-input" id="date-input" class="date-form__input">
+      <div class="date-form__btn-wrapper">
+        <button type="reset" id="date-form-cancel" class="default-btn">
+          отмена
+        </button>
+        <button type="submit" id="date-form-confirm" class="default-btn _fill">
+          добавить
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <section class="form-wrapper time-form-wrapper">
+    <form id="time-form" class="time-form__form">
+      <label for="time-form-time" class="time-form__label">Время:</label>
+      <input value="10:00" type="time" name="time" id="time-form-time" class="time-form__input">
+      <label for="time-form-name" class="time-form__label">Имя:</label>
+      <input type="text" name="name" id="time-form-name" class="time-form__input">
+      <label for="time-form-phone" class="time-form__label">Телефон:</label>
+      <input type="text" name="phoneNumber" id="time-form-phone" class="time-form__input">
+      <label for="time-form-inst" class="time-form__label">Instagram:</label>
+      <input type="text" name="instagram" id="time-form-inst" class="time-form__input">
+      <label for="time-form-comment" class="time-form__label">Коментарий:</label>
+      <textarea name="comment" id="time-form-comment" cols="30" rows="10" class="time-form__input comment"></textarea>
+      <div class="date-form__btn-wrapper">
+        <button type="reset" id="time-form-cancel" class="default-btn">
+          отмена
+        </button>
+        <button type="submit" id="time-form-confirm" class="default-btn _fill">
+          добавить
+        </button>
+      </div>
+    </form>
+  </section>
+
 </body>
+
 </html>
