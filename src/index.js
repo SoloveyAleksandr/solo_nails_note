@@ -174,19 +174,19 @@ const render = async () => {
         <button id="${item.id}" class="time-list__edit-btn"></button>
         <div class="time-list__info-wrapper time-list-info">
           <span class="time-list-info__title">время:</span>
-          <span>${item.time}</span>
+          <span class="time-list-info__info">${item.time}</span>
         </div>
         <div class="time-list__info-wrapper time-list-info">
           <span class="time-list-info__title">имя:</span>
-          <span>${item.name}</span>
+          <span class="time-list-info__info">${item.name}</span>
         </div>
         <div class="time-list__info-wrapper time-list-info">
           <span class="time-list-info__title">телефон:</span>
-          <a  href="tel:${item.phoneNumber}">позвонить</a>
+          <a  href="tel:${item.phoneNumber}" class="time-list-info__info">позвонить</a>
         </div>
         <div class="time-list__info-wrapper time-list-info">
           <span class="time-list-info__title">instagram:</span>
-          <a href="${item.instagram}">инс</a>
+          <a href="${item.instagram}" class="time-list-info__info">инс</a>
         </div>
         <div class="time-list__comment-wrapper time-list-info ">
           <span class="time-list-info__title">коментарий:</span>
