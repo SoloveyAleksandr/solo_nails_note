@@ -144,8 +144,8 @@ const render = async () => {
       <div class="day-item__header">
         <span class="day-item__date">${day.date}</span>
         <div class="day-item__btn-wrapper">
-          <button id="day-item-del-btn" class="day-item__btn _minus"></button>
-          <button id="day-item-add-btn" class="day-item__btn"></button>
+          <button id="day-item-del-btn" class="day-item__btn _remove"></button>
+          <button id="day-item-add-btn" class="day-item__btn _add"></button>
         </div>
       </div>
       <ul class="day-item__list time-list">

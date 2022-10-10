@@ -2,6 +2,8 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
+  top: 0;
+  left: 0;
   background-color: $white;
   display: flex;
   align-items: center;
@@ -16,20 +18,36 @@
     pointer-events: all;
   }
 
-  &__spiner {
-    width: 50px;
-    height: 50px;
-    background-color: $dark;
-    animation: spiner 1s linear infinite;
+  &-logo {
+    height: 80%;
+    width: 100%;
+    position: absolute;
+
+    &__img {
+      object-fit: contain;
+      height: 100%;
+      object-position: center center;
+      fill: $white;
+    }
+  }
+
+  &__gradient {
+    position: absolute;
+    width: 400%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 140, 230, 0) 0%, rgba(255, 108, 184, 0.331633) 17.19%, rgba(255, 91, 160, 0.76) 48.96%, rgba(255, 109, 185, 0.321429) 84.9%, rgba(255, 140, 230, 0) 100%);
+    top: -50%;
+    animation: gradient 1.5s linear infinite;
+    transform: rotate(45deg);
   }
 }
 
-@keyframes spiner {
+@keyframes gradient {
   0% {
-    transform: rotate(0deg);
+    top: -150%;
   }
 
   100% {
-    transform: rotate(360deg);
+    top: 150%;
   }
 }

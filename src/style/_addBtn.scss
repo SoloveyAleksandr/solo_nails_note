@@ -1,25 +1,23 @@
 .add-btn {
   outline: none;
-  border: 2px solid $dark;
   border-radius: 50%;
+  border: none;
   width: 50px;
   height: 50px;
-  background-color: $dark;
+  background: linear-gradient(-45deg, #FF5BA0 0%, #FF8CE6 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
+  z-index: 999;
   right: 15px;
   bottom: 15px;
   transition: .3s;
+  box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.4);
 
   &:hover {
-    background-color: $white;
-
-    &::before,
-    &::after {
-      background-color: $dark;
-    }
+    transform: translate(2px, 2px);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
   }
 
   &::before,
